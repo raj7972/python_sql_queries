@@ -1,0 +1,87 @@
+[
+    {
+        "milestone_title": "CRUD Operations On MySQL Database In GoLang",
+        "milestone_description": "You will be learning how to make create, read, update and delete operations of MySQL using python ",
+        "milestone_sequence": 1,
+        "status": "wip",
+        "milestone_task": [
+            {
+                "task_title": "Introduction To CRUD Operations",
+                "document_name": "1_introduction.md",
+                "task_sequence": 1,
+                "status": "wip",
+                "challenge": {
+                    "input": null,
+                    "expected_output": null,
+                    "max_score": 0
+                }
+            },
+            {
+                "task_title": "Project Setup: Local and MySQL",
+                "document_name": "setup.md",
+                "task_sequence": 2,
+                "status": "wip",
+                "challenge": {
+                    "input": null,
+                    "expected_output": null,
+                    "max_score": 0
+                }
+            },
+            {
+                "task_title": "Connect GoLang Application To MySQL Database",
+                "document_name": "connection.md",
+                "task_sequence": 3,
+                "status": "wip",
+                "challenge": {
+                    "input": null,
+                    "expected_output": null,
+                    "max_score": 0
+                }
+            },
+            {
+                "task_title": "CRUD Operations Part I: Create",
+                "document_name": "create.md",
+                "task_sequence": 4,
+                "status": "wip",
+                "challenge": {
+                    "input": null,
+                    "expected_output": null,
+                    "max_score": 0
+                }
+            },
+            {
+                "task_title": "CRUD Operations Part II: Read",
+                "document_name": "read.md",
+                "task_sequence": 5,
+                "status": "wip",
+                "challenge": {
+                    "input": null,
+                    "expected_output": null,
+                    "max_score": 0
+                }
+            },
+            {
+                "task_title": "CRUD Operations Part III: Update",
+                "document_name": "update.md",
+                "task_sequence": 6,
+                "status": "wip",
+                "challenge": {
+                    "input": null,
+                    "expected_output": null,
+                    "max_score": 0
+                }
+            },
+            {
+                "task_title": "CRUD Operations Part IV: Delete",
+                "document_name": "delete.md",
+                "task_sequence": 7,
+                "status": "wip",
+                "challenge": {
+                    "input": null,
+                    "expected_output": null,
+                    "max_score": 0
+                }
+            }
+        ]
+    }
+]
