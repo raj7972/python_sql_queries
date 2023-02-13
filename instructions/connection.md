@@ -19,9 +19,9 @@ create database employee;
 
 In main function create a cursor to interact with the database. we can check wheter we are connected or not by just ping the database above is theo code for checking the database connection
 ```python
-def database_conn(user,password,host,database):
+def get_connection():
   try:
-      cnx = mysql.connector.connect(user=user, password=password, host=host, database=database)
+      cnx = mysql.connector.connect(user="<user_name>", password="<password>", host="<host_address>", database="<database_name>")
 
       if cnx.is_connected():
           cnx.ping(reconnect=True)

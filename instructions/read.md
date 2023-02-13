@@ -9,12 +9,11 @@ Import the mysql connector to create a connection
 import mysql.connector
 
 def read_employee_data():
-    cnx = mysql.connector.connect(user='<username>', password='<password>',
-                                  host='<host_address>', database='<database_name>')
-    cursor = cnx.cursor()
-
+    
     select_query = "SELECT * FROM employees"
-
+    cnx = get_connection()  # call the get_connection() function to createa coonection with database.
+    cursor = cnx.cursor
+    
     cursor.execute(select_query)
     employee_data = cursor.fetchall()
     return employee_data
@@ -24,18 +23,16 @@ def read_employee_data():
 ```
 ## Step By Step Explanation for read_employee_data function
 
-1. In the above read function the first step is to create a connection between MYSQL server and create a cursor to interact with the database.
-Replace `<username>`, `<password>`, `<host_address>` and  `<database_name>` with your MySQL credentials. 
-
-    ```python
-    cnx = mysql.connector.connect(user=<username>, password=<password>,
-                                host=<host>, database=<database>)
-    cursor = cnx.cursor()
-    ```
-2. Execute the sql statement to get the employee details.
+1. Write the sql statement to get the employee details.
     ```python
        select_query = "SELECT * FROM employees"
     ```
+2. Create a connection with database to do so will call the get_connection function that we have created above and also create a cursor.
+    ```python
+    cnx = get_connection() 
+    cursor = cnx.cursor
+    ```
+
 3. We will use the fetchall() method to get all the entries from the database and close the database connection
     ```python
     employee_data = cursor.fetchall()
@@ -56,11 +53,7 @@ Replace `<username>`, `<password>`, `<host_address>` and  `<database_name>` with
     B. conn.execute("SELECT name, position FROM employees")
     C. conn.execute("SELECT employees.* FROM employees")
     ```
-<THBREAK>
-
 Answer: A
-
-<THBREAK>
 
 2. How would you retrieve the name and salary columns from a table named "employees" and limit the results to only the first 2 rows using Python and SQL?
 
@@ -70,11 +63,8 @@ Answer: A
     C. conn.execute("SELECT name, salary FROM employees ORDER BY salary LIMIT 2")
 ```
 
-<THBREAK>
-
 Answer: A
 
-<THBREAK>
 
 3. What is the correct syntax to retrieve the name and position columns from a table named "employees" sorted by position in ascending order using Python and SQL?
 ```python
@@ -82,7 +72,5 @@ Answer: A
     B. conn.execute("SELECT name, position FROM employees ORDER BY position DESC")
     C. conn.execute("SELECT * FROM employees ORDER BY position")
 ```
-
-<THBREAK>
 
 Answer: A

@@ -8,11 +8,10 @@ import mysql.connector
 
     
 def delete_employee_data(employee_id):
-    cnx = mysql.connector.connect(user='root', password='radara@121',
-                                  host='localhost', database='mytest')
-    cursor = cnx.cursor()
 
     delete_query = "DELETE FROM employees WHERE id=%s"
+    cnx = get_connection()
+    cursor = cnx.cursor()
     cursor.execute(delete_query, (employee_id,))
 
     cnx.commit()
@@ -29,17 +28,15 @@ Explanation:
 
 2. A function named delete_employee_data is defined that takes one parameter: employee_id.
 
-3. A connection to the database is established using the mysql.connector.connect method and a cursor object is created from the connection object.
+3. The SQL DELETE statement is defined using the DELETE FROM employees WHERE id=%s format, where %s is a placeholder for the employee_id parameter.
 
-4. The SQL DELETE statement is defined using the DELETE FROM employees WHERE id=%s format, where %s is a placeholder for the employee_id parameter.
+4. The execute method of the cursor object is used to execute the DELETE statement, passing the employee_id parameter as an argument.
 
-5. The execute method of the cursor object is used to execute the DELETE statement, passing the employee_id parameter as an argument.
+5. The cnx.commit method is called to persist the changes in the database.
 
-6. The cnx.commit method is called to persist the changes in the database.
+6. The number of deleted records is printed using the rowcount property of the cursor object.
 
-7. The number of deleted records is printed using the rowcount property of the cursor object.
-
-8. The cursor and connection objects are closed using the close method.
+7. The cursor and connection objects are closed using the close method.
 
 Call the delete_employee_data in dunder main 
 
@@ -65,11 +62,7 @@ you will see the below output in the command shell
     C. conn.execute("DELETE * FROM employees WHERE name='John Doe'")
     ````
 
-<THBREAK>
-
 Answer: A
-
-<THBREAK>
 
 2. What is the correct syntax to delete a single row from a table named "employees" where the id is 1 using Python and SQL?
 ```python
@@ -77,8 +70,6 @@ Answer: A
     B. conn.execute("TRUNCATE TABLE employees WHERE id=1")
     C. conn.execute("DELETE * FROM employees WHERE id=1")
 ```
-
-<THBREAK>
 
 Answer: A
 
