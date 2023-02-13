@@ -53,3 +53,34 @@ you will see the below output in the command shell
 ```shell
 1 record(s) deleted.
 ```
+
+## Excercise for SQL DELETE query using python
+
+<THBREAK>
+
+1. How would you delete all rows from a table named "employees" where the name is "John Doe" using Python and SQL?
+    ```python
+    A. conn.execute("DELETE FROM employees WHERE name='John Doe'")
+    B. conn.execute("TRUNCATE TABLE employees WHERE name='John Doe'")
+    C. conn.execute("DELETE * FROM employees WHERE name='John Doe'")
+    ````
+
+<THBREAK>
+
+Answer: A
+
+<THBREAK>
+
+2. What is the correct syntax to delete a single row from a table named "employees" where the id is 1 using Python and SQL?
+```python
+    A. conn.execute("DELETE FROM employees WHERE id=1")     
+    B. conn.execute("TRUNCATE TABLE employees WHERE id=1")
+    C. conn.execute("DELETE * FROM employees WHERE id=1")
+```
+
+<THBREAK>
+
+Answer: A
+
+Note: In the above code snippets, it is assumed that the id column in the employees table is the primary key and the row with id=1 exists in the table.
+
